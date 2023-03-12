@@ -6,13 +6,12 @@
 	justify-content: center;
     font-family: 'Sono', sans-serif;
     font-size: large;
-    transition: 0.6s;
     padding: 1rem 5rem;
 }
 
 .container__input {
-    width: 0;
-    height: 0;
+    width: 0rem;
+    height: 0rem;
     appearance: none;
 }
 
@@ -45,14 +44,16 @@
     padding: 1.8rem;
 	width: 1.8rem;
 	height: 1.8rem;	
-	transition: fill 0.5s ease-out;
+	transition: fill 1s ease-out;
 	transform: rotate(90deg);
-    fill: transparent;
 }
 
-.label__header:active{
+.label__header:active, .label__header:hover, .label__icon:hover{
+    transition: 0.1s ease-in-out;
     color: blueviolet;
+    fill: blueviolet;
 }
+
 .label__header:active .label__icon {
     transform: rotate(45deg);
 	fill: blueviolet;
@@ -61,4 +62,5 @@
  input:checked ~ .container__content {
     display: flex;
 }
+
 
