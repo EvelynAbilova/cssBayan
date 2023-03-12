@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200&display=swap');
+
+.container {
+    display: flex;
+	flex-direction:column;
+	justify-content: center;
+    font-family: 'Sono', sans-serif;
+    font-size: large;
+    transition: 0.6s;
+    padding: 1rem 5rem;
+}
+
+.container__input {
+    width: 0;
+    height: 0;
+    appearance: none;
+}
+
+.container__content {
+    display: none;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+}
+
+.label__title, .page-title {
+    text-align:start; 
+}
+
+.container__label{
+    display: block;
+	cursor: pointer;
+}
+
+.container__label:active {
+    opacity: 50%;
+}
+
+.label__header {
+    display: flex;
+	justify-content:space-between;
+    border-top: 0.1rem solid grey;
+}
+
+.label__icon {
+    padding: 1.8rem;
+	width: 1.8rem;
+	height: 1.8rem;	
+	transition: fill 0.5s ease-out;
+	transform: rotate(90deg);
+    fill: transparent;
+}
+
+.label__header:active{
+    color: blueviolet;
+}
+.label__header:active .label__icon {
+    transform: rotate(45deg);
+	fill: blueviolet;
+}
+
+ input:checked ~ .container__content {
+    display: flex;
+}
+
